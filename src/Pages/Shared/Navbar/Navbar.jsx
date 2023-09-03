@@ -72,7 +72,7 @@ const Navbar = () => {
             <div className="navbar-end">
                 {
                     user ? <>
-                        <span className="mt-2 px-2 text-sm md:text-lg ">{user?.displayName}</span>
+                        <span className="mt-2 px-2 text-transparent md:text-white text-sm md:text-lg ">{user?.displayName}</span>
                         <span><img className="w-14 h-14 rounded-full" src={user?.photoURL} alt="" /></span>
                     </> : <></>
                 }

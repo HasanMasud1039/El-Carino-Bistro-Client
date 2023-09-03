@@ -18,7 +18,7 @@ const FoodCard = ({item}) => {
         //send data to db
         if(user && user.email){
             const cartItem = {menuItemId: _id, name, image, price, email: user.email};
-            fetch('https://bistro-boss-server-sage.vercel.app/carts', {
+            fetch('https://el-carino-bistro-server.vercel.app/carts', {
                 method: 'POST',
                 headers:{
                     'content-type': 'application/json'

@@ -1,13 +1,14 @@
 import { useEffect } from "react";
 import useAuth from "../../../Hooks/useAuth/useAuth";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 
 const PaymentHistory = () => {
     const { user } = useAuth();
     const [payment, setPayment] = useState([]);
     useEffect(() => {
-        fetch('https://bistro-boss-server-sage.vercel.app/payments')
+        fetch('https://el-carino-bistro-server.vercel.app/payments')
         .then(res => res.json())
         .then(data => {
             setPayment(data);
@@ -15,6 +16,9 @@ const PaymentHistory = () => {
     },[])
     return (
         <div>
+             <Helmet>
+                <title>el Cariño Bistro | Payment History</title>
+            </Helmet>
             <h1 className="p-10 text-center text-3xl">Payment History of {user.displayName}</h1>
 
             <div>

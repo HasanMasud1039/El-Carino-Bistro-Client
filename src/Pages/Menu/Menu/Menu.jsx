@@ -20,9 +20,8 @@ const Menu = () => {
     const offered = menu.filter(item => item.category === 'offered')
     return (
         <div>
-            <Helmet>
-                <title>Bistro Menu</title>
-                <link rel="canonical" href="https://www.tacobell.com/" />
+             <Helmet>
+                <title>el Cariño Bistro | Menu</title>
             </Helmet>
             <Cover img={menuImg} title="our menu"></Cover>
              

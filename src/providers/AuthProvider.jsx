@@ -42,7 +42,7 @@ const AuthProvider = ({ children }) => {
             
             //get and set token
             if(currentUser){
-                axios.post('https://bistro-boss-server-sage.vercel.app/jwt', {email: currentUser.email})
+                axios.post('https://el-carino-bistro-server.vercel.app/jwt', {email: currentUser.email})
                 .then(data =>{
                     console.log(data)
                     localStorage.setItem('access-token', data.data);

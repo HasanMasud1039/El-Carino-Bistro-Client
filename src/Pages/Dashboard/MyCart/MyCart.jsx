@@ -21,7 +21,7 @@ const MyCart = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://bistro-boss-server-sage.vercel.app/carts/${item._id}`, {
+                fetch(`https://el-carino-bistro-server.vercel.app/carts/${item._id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -44,9 +44,9 @@ const MyCart = () => {
             <Helmet>
                 <title>el Cariño Bistro | My Cart</title>
             </Helmet>
-            <div className="uppercase font-semibold h-[60px] my-4 bg-slate-300 rounded-xl flex justify-around items-center">
-                <h3 className="text-3xl">Total Items: {cart.length}</h3>
-                <h3 className="text-3xl">Total Price: ${total.toFixed(2)}</h3>
+            <div className="uppercase  font-semibold h-[60px] my-4 bg-slate-300 rounded-xl flex justify-around items-center">
+                <h3 className="md:text-3xl text-lg">Total Items: {cart.length}</h3>
+                <h3 className="md:text-3xl text-lg">Total Price: ${total.toFixed(2)}</h3>
                 <Link to="/dashboard/payment">
                     <button className="btn btn-warning btn-sm px-6 py-2">PAY</button>
                 </Link>

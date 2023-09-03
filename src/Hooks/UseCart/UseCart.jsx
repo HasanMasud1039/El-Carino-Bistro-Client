@@ -19,7 +19,7 @@ const useCart = () => {
             return response.data;
         },
         // queryFn: async() => {
-        //     const response= await fetch(`https://bistro-boss-server-sage.vercel.app/carts?email=${user.email}`, {
+        //     const response= await fetch(`https://el-carino-bistro-server.vercel.app/carts?email=${user.email}`, {
         //         headers: {
         //             authorization: `bearer ${token}`
         //         }

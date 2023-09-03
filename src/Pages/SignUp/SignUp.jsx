@@ -5,7 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
 import SocialLogin from "../Shared/SocialLogin/SocialLogin";
-import image from '../../assets/icon/aa.jpg'
+
 
 const SignUp = () => {
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
@@ -18,7 +18,7 @@ const SignUp = () => {
     createUser(data.email, data.password)
       .then(result => {
         const saveUser = { name: data.name, email: data.email }
-        fetch('https://bistro-boss-server-sage.vercel.app/users', {
+        fetch('https://el-carino-bistro-server.vercel.app/users', {
           method: 'POST',
           headers: {
             'content-type': 'application/json'
